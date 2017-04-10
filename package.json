@@ -1,10 +1,10 @@
 {
-  "name": "app",
+  "name": "rest-endpoint",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a readme file.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt test"
   },
   "author": "matt-lindsay",
   "license": "ISC",
@@ -14,5 +14,14 @@
     "express": "^4.15.2",
     "https": "^1.0.0",
     "node-slackr": "^0.1.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matt-lindsay/rest-endpoint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/matt-lindsay/rest-endpoint/issues"
+  },
+  "homepage": "https://github.com/matt-lindsay/rest-endpoint#readme"
 }
