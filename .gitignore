@@ -1,7 +1,5 @@
 # Git Ignore File
 
-# Config Files
-launch.json
 # Project Dependencies
 node_modules/
 public/lib/bootstrap
@@ -14,3 +12,5 @@ public/lib/typeahead.js
 # Tools
 .jscsrc
 .jshintrc
+
+.codeship.aes
