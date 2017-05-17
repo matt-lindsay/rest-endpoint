@@ -4,7 +4,6 @@
   "description": "This is a readme file.",
   "main": "app.js",
   "scripts": {
-    "postinstall": "bower install",
     "prestart": "npm install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
