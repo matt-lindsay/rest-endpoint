@@ -13,4 +13,4 @@ public/lib/typeahead.js
 .jscsrc
 .jshintrc
 
-.codeship.aes
+codeship.aes
