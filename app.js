@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function (req, res) {
-    res.status(200).send('Welcome to my endpoint.');
+    res.status(200).send('Welcome to my endpoint. It will return your http request for examination via Slack.');
 });
 
 app.post('/', function (req, res, next) {
