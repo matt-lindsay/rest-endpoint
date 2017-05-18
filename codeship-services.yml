@@ -1,4 +1,4 @@
 app:
   build:
-    image: mattlindsay/rest-endpoint
+    image: matt-lindsay/rest-endpoint
     dockerfile: Dockerfile
