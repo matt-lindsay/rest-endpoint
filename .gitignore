@@ -12,7 +12,5 @@ public/lib/typeahead.js
 # Tools
 .jscsrc
 .jshintrc
-vscode/*
+vscode
 launch.json
-
-codeship.aes
