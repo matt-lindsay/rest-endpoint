@@ -4,5 +4,5 @@
   registry: https://index.docker.io/v1/
   encrypted_dockercfg_path: dockercfg.encrypted
 
-- service: app
-  command: ./deploy.sh
+#- service: app
+#  command: ./deploy.sh
