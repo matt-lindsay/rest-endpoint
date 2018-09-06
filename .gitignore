@@ -2,12 +2,6 @@
 
 # Project Dependencies
 node_modules/
-public/lib/bootstrap
-public/lib/font-awesome
-public/lib/jquery
-public/lib/leaflet
-public/lib/leaflet.markercluster
-public/lib/typeahead.js
 
 # Tools
 .jscsrc

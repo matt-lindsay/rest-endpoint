@@ -1,10 +1,12 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var benNotifSlack = require('./slack.js');
+'use strict';
 
-var app = express();
+const express = require('express');
+const bodyParser = require('body-parser');
+const slack = require('./slack.js');
 
-var port = process.env.PORT;
+let app = express();
+
+let port = process.env.PORT;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -17,10 +19,10 @@ app.post('/', function (req, res, next) {
     var data = req.body;
     if (data) {
         res.status(200).json(data);
-        benNotifSlack(data, 'good', 'Success');
+        slack(data, 'good', 'Success');
     } else {
         res.status(400).send('Error.');
-        benNotifSlack('No json.', 'warning', 'Bad Request');
+        slack('No json.', 'warning', 'Bad Request');
     }
 });
 

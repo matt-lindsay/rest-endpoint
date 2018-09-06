@@ -1,8 +1,5 @@
 # Use nodejs LTS source
-FROM node:boron
-
-# Add envrionment variables
-ENV PORT 8080
+FROM node:carbon
 
 # Create app directory
 RUN mkdir -p /usr/src/app
