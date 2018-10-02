@@ -6,14 +6,18 @@
   "scripts": {
     "prestart": "npm install",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "DEBUG=app:* nodemon app.js",
+    "lint": "eslint ./src/services/slack.js"
   },
   "author": "matt-lindsay",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.1",
+    "chalk": "^2.4.1",
+    "debug": "^4.0.1",
     "express": "^4.15.2",
     "https": "^1.0.0",
+    "morgan": "^1.9.1",
     "node-slackr": "^0.1.4"
   },
   "devDependencies": {

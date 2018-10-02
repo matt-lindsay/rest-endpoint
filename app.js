@@ -1,35 +1,35 @@
-'use strict';
-
 const express = require('express');
 const bodyParser = require('body-parser');
+const chalk = require('chalk');
+const debug = require('debug')('app');
+const morgan = require('morgan');
 const slack = require('./src/services/slack.js');
 
-let app = express();
+const app = express();
+const port = process.env.PORT;
 
-let port = process.env.PORT;
-
+app.use(morgan('tiny'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', function (req, res) {
-    res.status(200).send('Welcome to my endpoint. It will return your http request for examination via Slack.');
+app.get('/', (res) => {
+  res.status(200).send('Welcome to my endpoint. It will return your http request for examination via Slack.');
 });
 
-app.post('/', function (req, res, next) {
-    var data = req.body;
-    if (data) {
-        res.status(200).json(data);
-        slack(data, 'good', 'Success');
-    } else {
-        res.status(400).send('Error.');
-        slack('No json.', 'warning', 'Bad Request');
-    }
+app.post('/', (req, res) => {
+  const data = req.body;
+  if (data) {
+    res.status(200).json(data);
+    slack(data, 'good', 'Success');
+  } else {
+    res.status(400).send('Error.');
+    slack('No json.', 'warning', 'Bad Request');
+  }
 });
 
-app.listen(port, function (err) {
-    if (err) {
-        throw err;
-    }
-    console.log('Running server on port ' + port);
+app.listen(port, (err) => {
+  if (err) {
+    throw err;
+  }
+  debug(`Listening at port ${chalk.green(port)}`);
 });
-
