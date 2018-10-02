@@ -2,7 +2,7 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const slack = require('./slack.js');
+const slack = require('./src/services/slack.js');
 
 let app = express();
 
