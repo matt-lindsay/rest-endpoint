@@ -32,5 +32,16 @@
   "bugs": {
     "url": "https://github.com/matt-lindsay/rest-endpoint/issues"
   },
-  "homepage": "https://github.com/matt-lindsay/rest-endpoint#readme"
+  "homepage": "https://github.com/matt-lindsay/rest-endpoint#readme",
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000
+    }
+  }
 }
